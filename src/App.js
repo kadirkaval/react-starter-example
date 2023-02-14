@@ -1,10 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      test
+     <p>Test</p>
+     <p>
+     {
+        process.env.REACT_APP_API_URL
+      }
+     </p>
     </div>
   );
 }
