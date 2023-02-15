@@ -1,16 +1,24 @@
+import { useState } from 'react';
 import './App.css';
+import Tab from './components/Tab';
 import "./index.css";
 
+
 function App() {
+  const [activeTab, setActiveTab] = useState(0);
   return (
-    <div className="bg-lime-300 text-yellow-500 font-semibold mx-auto w-full">
-     <p>Test</p>
-     <p>
+    <div>
+      <button onClick={()=>setActiveTab((Math.random()*2).toFixed(0))}>Aktif tabı değiştir</button>
+     <Tab activeTab={activeTab} setActiveTab={setActiveTab}>
+        <Tab.Panel title="Profile">1.Tab</Tab.Panel>
+        <Tab.Panel title="Hakkında">2.Tab</Tab.Panel>
+        <Tab.Panel title="Ayarlar">3.Tab</Tab.Panel>
+     </Tab>
      {
-        process.env.REACT_APP_API_URL
-      }
-     </p>
-    <button className='w-[200px] rounded py-2 px-7 bg-blue-600 text-white hover:bg-blue-800 transition duration-150 ease-in-out text-xl'>Gönder</button>
+      activeTab === 2 && (
+        <div>Burasıda ektra bir alan</div>
+      )
+     }
     </div>
   );
 }
