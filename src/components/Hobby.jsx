@@ -3,10 +3,10 @@ import React from 'react'
 function Hobby() {
     const hobbies = ["Surfing", "Rock climbing", "Mountain biking", "Breakdancing"];
   return (
-    <ul>
+    <ul className='text-xl font-semibold'>
     {
         hobbies.map((hobby, index)=>(
-            <li key={index}>{hobby}</li>
+            <li key={index}>{index+1}-{hobby}</li>
         ))
     }
     </ul>

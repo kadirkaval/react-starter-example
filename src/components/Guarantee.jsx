@@ -1,11 +1,10 @@
 import React from 'react'
-import "../index.css";
 
 function Guarantee({img, title, description}) {
   return (
     <div className=''>
-        <img src={img} className="mx-auto mb-2 h-[20px]"/>
-        <h3 className='text-2xl font-bold mb-2'>{title}</h3>
+        <img src={img} className="mx-auto p-2 mb-5 h-[100px]"/>
+        <h3 className='font-bold text-2xl mb-1 text-gray-600'>{title}</h3>
         <p>{description}</p>
     </div>
   )

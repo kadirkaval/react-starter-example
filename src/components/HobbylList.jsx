@@ -3,7 +3,7 @@ import Hobby from './Hobby'
 
 function HobbylList() {
   return (
-    <div>
+    <div className='w-[200px] mx-auto my-6'>
         <Hobby/>
     </div>
   )
